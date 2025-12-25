@@ -1,99 +1,60 @@
-# Role-Based Dashboard Application (React)
+# Role-Based React Dashboard
 
-This project is a React-based dashboard application built to demonstrate
-role-based sidebar rendering, protected routes, and theme persistence.
-The application follows a clean and scalable folder structure inspired by
-real-world enterprise React applications.
+A modern React dashboard application demonstrating **role-based navigation**,  
+**protected routing**, **theme switching**, and a **clean enterprise-style layout**.
 
-All menus, routes, and permissions are driven by configuration JSON,
-avoiding hardcoded logic.
+This project focuses on UI structure, routing logic, and frontend best practices,
+similar to real-world admin dashboards.
 
 ---
 
 ## 🚀 Features
 
-- Dynamic sidebar rendered from configuration JSON
-- Parent → child menu hierarchy
-- Only enabled menus and routes are accessible
-- Protected routes with 403 Forbidden handling
-- Multiple UI themes (Blue, Green, Purple, Dark)
-- Theme persistence using localStorage
-- Dynamic TopBar with profile dropdown
-- Theme selection and logout option
-- Clean and maintainable folder structure
+- Collapsible sidebar with nested menus (CRM & Settings)
+- Role-based navigation structure
+- Protected routes with **403 Forbidden** handling
+- Dynamic Topbar with profile dropdown
+- Profile dropdown includes:
+  - View Profile
+  - Theme selection (multiple colors)
+  - Logout option
+- Theme switching with light & dark contrast handling
+- Clean card-style content layout
+- Modern icons using **lucide-react**
+- Fully responsive layout foundation
 
 ---
 
-## 🧱 Folder Structure Diagram
-<<<<<<< HEAD
+## 🧱 Folder Structure
 
 ```text
-
 src/
 ├── components/
-│ ├── common/ # Reusable UI components
-│ ├── layout/ # Sidebar, TopBar, Layout
-│ └── routing/ # ProtectedRoute logic
->>>>>>> 01ab5e9 (Readme Update commit: Role-based React dashboard)
+│   ├── common/        # Reusable UI components (ThemeGrid)
+│   ├── layout/        # Layout components (Sidebar, TopBar, Layout)
+│   └── routing/       # Route protection logic
 │
-├── config/ # App configuration (menus, permissions)
-├── context/ # Global state (Theme)
-├── pages/ # Route-level pages (Welcome, 403, 404)
-├── utils/ # Helper functions
-├── styles/ # Global & layout styles
+├── context/           # Global state (ThemeContext)
+├── pages/             # Route-level pages (Welcome, 403, 404)
+├── styles/            # Global and layout styles
 │
-├── App.jsx # Route definitions
-├── main.jsx # App entry point
-└── index.css # Global CSS
+├── App.jsx            # Route definitions
+├── main.jsx           # App entry point
+└── index.css          # Global styles
 
----
+## 🔐 Routing & Authorization
 
-## 🔐 Sidebar Permission Logic
+  - Routing is handled using React Router
+  - Unauthorized access is redirected to a 403 Forbidden page
+  - Invalid routes show a 404 Not Found page
+  - This setup simulates real-world permission-based navigation
 
-- Sidebar menus are generated dynamically from `permissions.json`
-- Only menus and child routes with `enabled: true` are rendered
-- Parent menus are shown only if they are enabled
-- Permissions can be changed without modifying UI code
+## 🎨 Theme Management
 
----
+  - Multiple theme colors are available from the profile dropdown
+  - Light theme automatically switches text to dark for readability
+  - Sidebar remains fixed dark for better UX consistency
+  - Theme state is managed globally using React Context API
 
-## 🛡 Protected Route Handling
-
-- Routes are generated dynamically from configuration
-- `ProtectedRoute` validates whether a route is enabled
-- Unauthorized or disabled routes redirect to a **403 Forbidden** page
-
----
-
-## 🎨 Theme Management & Persistence
-
-- Supports multiple predefined themes:
-  - Blue
-  - Green
-  - Purple
-  - Dark
-- Theme selection is available in the TopBar profile dropdown
-- Selected theme is stored in `localStorage`
-- Theme is restored automatically on page refresh
-
----
-
-## 🌐 Live Deployment
-
-The application is deployed on **Netlify**:
-
-## 🌐 Live Demo
-
-The application is deployed on Netlify and can be accessed here:
-
-🔗 **Live URL:** [https://your-project-name.netlify.app](https://react-role-based-dashboard.netlify.app/)
-
-
----
-
-## 🧪 Running the Project Locally
-
-```bash
-npm install
-npm run dev
-
+## The application will be available at:
+🔗 **Live URL:** [https://your-project-name.netlify.app]
