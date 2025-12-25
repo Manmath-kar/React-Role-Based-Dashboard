@@ -25,45 +25,27 @@ avoiding hardcoded logic.
 ---
 
 ## 🧱 Folder Structure Diagram
+<<<<<<< HEAD
 ```text
 src
-│
-├── components
-│ ├── common
-│ │ └── ThemeSelector.jsx
-│ │
-│ ├── layout
-│ │ ├── Layout.jsx
-│ │ ├── Sidebar.jsx
-│ │ └── TopBar.jsx
-│ │
-│ └── routing
-│ └── ProtectedRoute.jsx
-│
-├── config
-│ └── permissions.json
-│
-├── context
-│ └── ThemeContext.jsx
-│
-├── pages
-│ ├── Welcome.jsx
-│ ├── Forbidden.jsx
-│ └── NotFound.jsx
-│
-├── utils
-│ └── routeUtils.js
-│
-├── styles
-│ ├── themes.css
-│ └── layout.css
-│
-├── App.jsx
-├── main.jsx
-└── index.css
+=======
 
-
----
+src/
+├── components/
+│ ├── common/ # Reusable UI components
+│ ├── layout/ # Sidebar, TopBar, Layout
+│ └── routing/ # ProtectedRoute logic
+>>>>>>> 01ab5e9 (Readme Update commit: Role-based React dashboard)
+│
+├── config/ # App configuration (menus, permissions)
+├── context/ # Global state (Theme)
+├── pages/ # Route-level pages (Welcome, 403, 404)
+├── utils/ # Helper functions
+├── styles/ # Global & layout styles
+│
+├── App.jsx # Route definitions
+├── main.jsx # App entry point
+└── index.css # Global CSS
 
 ---
 
