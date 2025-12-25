@@ -101,8 +101,12 @@ src
 
 The application is deployed on **Netlify**:
 
-🔗 **Live URL:**  
-[https://your-project-name.netlify.app](https://react-role-based-dashboard.netlify.app/)
+## 🌐 Live Demo
+
+The application is deployed on Netlify and can be accessed here:
+
+🔗 **Live URL:** [https://your-project-name.netlify.app](https://react-role-based-dashboard.netlify.app/)
+
 
 ---
 
