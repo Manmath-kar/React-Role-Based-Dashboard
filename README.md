@@ -25,7 +25,7 @@ avoiding hardcoded logic.
 ---
 
 ## 🧱 Folder Structure Diagram
-
+```text
 src
 │
 ├── components
