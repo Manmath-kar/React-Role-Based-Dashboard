@@ -30,6 +30,8 @@ avoiding hardcoded logic.
 src
 =======
 
+```text
+
 src/
 ├── components/
 │ ├── common/ # Reusable UI components
