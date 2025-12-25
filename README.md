@@ -1,16 +1,116 @@
-# React + Vite
+# Role-Based Dashboard Application (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based dashboard application built to demonstrate
+role-based sidebar rendering, protected routes, and theme persistence.
+The application follows a clean and scalable folder structure inspired by
+real-world enterprise React applications.
 
-Currently, two official plugins are available:
+All menus, routes, and permissions are driven by configuration JSON,
+avoiding hardcoded logic.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Dynamic sidebar rendered from configuration JSON
+- Parent → child menu hierarchy
+- Only enabled menus and routes are accessible
+- Protected routes with 403 Forbidden handling
+- Multiple UI themes (Blue, Green, Purple, Dark)
+- Theme persistence using localStorage
+- Dynamic TopBar with profile dropdown
+- Theme selection and logout option
+- Clean and maintainable folder structure
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Folder Structure Diagram
+
+src
+│
+├── components
+│ ├── common
+│ │ └── ThemeSelector.jsx
+│ │
+│ ├── layout
+│ │ ├── Layout.jsx
+│ │ ├── Sidebar.jsx
+│ │ └── TopBar.jsx
+│ │
+│ └── routing
+│ └── ProtectedRoute.jsx
+│
+├── config
+│ └── permissions.json
+│
+├── context
+│ └── ThemeContext.jsx
+│
+├── pages
+│ ├── Welcome.jsx
+│ ├── Forbidden.jsx
+│ └── NotFound.jsx
+│
+├── utils
+│ └── routeUtils.js
+│
+├── styles
+│ ├── themes.css
+│ └── layout.css
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+
+
+---
+
+---
+
+## 🔐 Sidebar Permission Logic
+
+- Sidebar menus are generated dynamically from `permissions.json`
+- Only menus and child routes with `enabled: true` are rendered
+- Parent menus are shown only if they are enabled
+- Permissions can be changed without modifying UI code
+
+---
+
+## 🛡 Protected Route Handling
+
+- Routes are generated dynamically from configuration
+- `ProtectedRoute` validates whether a route is enabled
+- Unauthorized or disabled routes redirect to a **403 Forbidden** page
+
+---
+
+## 🎨 Theme Management & Persistence
+
+- Supports multiple predefined themes:
+  - Blue
+  - Green
+  - Purple
+  - Dark
+- Theme selection is available in the TopBar profile dropdown
+- Selected theme is stored in `localStorage`
+- Theme is restored automatically on page refresh
+
+---
+
+## 🌐 Live Deployment
+
+The application is deployed on **Netlify**:
+
+🔗 **Live URL:**  
+https://your-project-name.netlify.app
+
+> Replace the above URL with your actual Netlify deployment link.
+
+---
+
+## 🧪 Running the Project Locally
+
+```bash
+npm install
+npm run dev
+
