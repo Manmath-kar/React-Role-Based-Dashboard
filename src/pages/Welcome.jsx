@@ -1,11 +1,11 @@
 import { useParams, Navigate } from "react-router-dom";
 
-const DISABLED_PAGES = ["reports"];
+const DISABLED = ["reports"];
 
 export default function Welcome() {
   const { page } = useParams();
 
-  if (DISABLED_PAGES.includes(page)) {
+  if (DISABLED.includes(page)) {
     return <Navigate to="/403" replace />;
   }
 

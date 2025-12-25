@@ -45,7 +45,9 @@ export default function Sidebar() {
 
         {settingsOpen && (
           <div className="menu-items">
-            <NavLink to="/settings/profile"><Users size={16}/> {!collapsed && "Profile"}</NavLink>
+            <NavLink to="/settings/profile">
+              <Users size={16}/> {!collapsed && "Profile"}
+            </NavLink>
           </div>
         )}
       </div>

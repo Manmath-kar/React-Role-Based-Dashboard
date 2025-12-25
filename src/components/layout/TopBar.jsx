@@ -16,26 +16,15 @@ export default function TopBar() {
 
         {open && (
           <div className="dropdown">
-            {/* VIEW PROFILE */}
-            <div className="dropdown-section">
-              <div className="dropdown-item profile-item">
-                <User size={16} />
-                View Profile
-              </div>
+            <div className="dropdown-item profile-item">
+              <User size={16} /> View Profile
             </div>
 
-            {/* THEMES */}
-            <div className="dropdown-section">
-              <div className="dropdown-title">Themes</div>
-              <ThemeGrid />
-            </div>
+            <div className="dropdown-title">Themes</div>
+            <ThemeGrid />
 
-            {/* LOGOUT */}
-            <div className="dropdown-section logout">
-              <div className="dropdown-item">
-                <LogOut size={16} />
-                Logout
-              </div>
+            <div className="dropdown-item logout">
+              <LogOut size={16} /> Logout
             </div>
           </div>
         )}
