@@ -69,6 +69,4 @@ src/
 ├── main.jsx           # App entry point
 └── index.css          # Global styles
 
----
-
 
