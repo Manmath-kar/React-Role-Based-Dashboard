@@ -42,12 +42,16 @@ src/
 ├── main.jsx           # App entry point
 └── index.css          # Global styles
 
+---
+
 ## 🔐 Routing & Authorization
 
   - Routing is handled using React Router
   - Unauthorized access is redirected to a 403 Forbidden page
   - Invalid routes show a 404 Not Found page
   - This setup simulates real-world permission-based navigation
+
+---
 
 ## 🎨 Theme Management
 
@@ -56,5 +60,11 @@ src/
   - Sidebar remains fixed dark for better UX consistency
   - Theme state is managed globally using React Context API
 
-## The application will be available at:
-🔗 **Live URL:** [https://your-project-name.netlify.app]
+---
+
+## 🌐 Live Demo
+
+The application is deployed on **Netlify** and can be accessed here:
+
+🔗 **Live URL:**  
+[https://react-role-based-dashboard.netlify.app/]
