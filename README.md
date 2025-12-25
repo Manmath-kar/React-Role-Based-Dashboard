@@ -25,25 +25,6 @@ similar to real-world admin dashboards.
 
 ---
 
-## 🧱 Folder Structure
-
-```text
-src/
-├── components/
-│   ├── common/        # Reusable UI components (ThemeGrid)
-│   ├── layout/        # Layout components (Sidebar, TopBar, Layout)
-│   └── routing/       # Route protection logic
-│
-├── context/           # Global state (ThemeContext)
-├── pages/             # Route-level pages (Welcome, 403, 404)
-├── styles/            # Global and layout styles
-│
-├── App.jsx            # Route definitions
-├── main.jsx           # App entry point
-└── index.css          # Global styles
-
----
-
 ## 🔐 Routing & Authorization
 
   - Routing is handled using React Router
@@ -68,3 +49,26 @@ The application is deployed on **Netlify** and can be accessed here:
 
 🔗 **Live URL:**  
 [https://react-role-based-dashboard.netlify.app/]
+
+---
+
+## 🧱 Folder Structure
+
+```text
+src/
+├── components/
+│   ├── common/        # Reusable UI components (ThemeGrid)
+│   ├── layout/        # Layout components (Sidebar, TopBar, Layout)
+│   └── routing/       # Route protection logic
+│
+├── context/           # Global state (ThemeContext)
+├── pages/             # Route-level pages (Welcome, 403, 404)
+├── styles/            # Global and layout styles
+│
+├── App.jsx            # Route definitions
+├── main.jsx           # App entry point
+└── index.css          # Global styles
+
+---
+
+
