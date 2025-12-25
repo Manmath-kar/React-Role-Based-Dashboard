@@ -102,9 +102,7 @@ src
 The application is deployed on **Netlify**:
 
 🔗 **Live URL:**  
-https://your-project-name.netlify.app
-
-> Replace the above URL with your actual Netlify deployment link.
+[https://your-project-name.netlify.app](https://react-role-based-dashboard.netlify.app/)
 
 ---
 
