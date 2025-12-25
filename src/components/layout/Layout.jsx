@@ -7,10 +7,12 @@ export default function Layout() {
   return (
     <div className="app-layout">
       <Sidebar />
-      <div className="main-section">
+      <div className="main">
         <TopBar />
         <div className="content">
-          <Outlet />
+          <div className="content-inner">
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>

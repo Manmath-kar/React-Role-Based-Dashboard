@@ -1,39 +1,42 @@
 import { useState } from "react";
-import permissions from "../../config/permissions.json";
-import ThemeSelector from "../common/ThemeSelector";
+import { MoreVertical, User, LogOut } from "lucide-react";
+import ThemeGrid from "../common/ThemeGrid";
 
 export default function TopBar() {
-  const { user } = permissions;
   const [open, setOpen] = useState(false);
-
-  const logout = () => {
-    alert("Logged out");
-  };
 
   return (
     <header className="topbar">
-      <span>Welcome {user.name}</span>
+      <span>Welcome back 👋</span>
 
-      <div className="profile-wrapper">
-        <div
-          className="profile-trigger"
-          onClick={() => setOpen(prev => !prev)}
-        >
-          {user.role}
-          <span className="caret">▾</span>
-        </div>
+      <div className="profile">
+        <div className="avatar">JA</div>
+        <span>Alex CRM Admin</span>
+        <MoreVertical onClick={() => setOpen(!open)} />
 
         {open && (
-          <div className="profile-dropdown">
-            <span className="dropdown-title">Theme</span>
-            <ThemeSelector />
+          <div className="dropdown">
+            {/* VIEW PROFILE */}
+            <div className="dropdown-section">
+              <div className="dropdown-item profile-item">
+                <User size={16} />
+                View Profile
+              </div>
+            </div>
 
-            <div className="dropdown-divider" />
+            {/* THEMES */}
+            <div className="dropdown-section">
+              <div className="dropdown-title">Themes</div>
+              <ThemeGrid />
+            </div>
 
-            <button className="logout-btn" onClick={logout}>
-              <span className="logout-icon" />
-              Logout
-            </button>
+            {/* LOGOUT */}
+            <div className="dropdown-section logout">
+              <div className="dropdown-item">
+                <LogOut size={16} />
+                Logout
+              </div>
+            </div>
           </div>
         )}
       </div>
