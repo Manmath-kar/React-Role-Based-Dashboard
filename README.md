@@ -26,9 +26,6 @@ avoiding hardcoded logic.
 
 ## 🧱 Folder Structure Diagram
 <<<<<<< HEAD
-```text
-src
-=======
 
 ```text
 
